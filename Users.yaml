@@ -1,0 +1,72 @@
+kamctl db show subscriber
++----+----------+--------------+-----------+----------------------------------+----------------------------------+
+| id | username | domain       | password  | ha1                              | ha1b                             |
++----+----------+--------------+-----------+----------------------------------+----------------------------------+
+|  1 | 2001     | kamilio.org  | Paras2001 | 5e40245e77475e1367ddd0d736913049 | 99de80cc8417920908d3f7eb5a5f6232 |
+|  2 | 1000     | kamilio.org  | paras1000 | 996f8d8780365ef207ae0b7c3306d563 | d3886e2673382416d4f934f6a3c95956 |
+|  3 | 1001     | kamilio.org  | paras1001 | f0930484445974012a9d3372b5d6a751 | 7c3a1bc9bc9b835ddad591545e82a8b3 |
+|  4 | 3001     | kamailio.org | paras3001 | c1c5ed3ba4b949eb2658693cc6f993f7 | 1cda0ad147a8ba0972aca907f5f5a4f3 |
++----+----------+--------------+-----------+----------------------------------+----------------------------------+
+
+service kamailio status
+Redirecting to /bin/systemctl status kamailio.service
+● kamailio.service - Kamailio SIP Proxy Server
+   Loaded: loaded (/etc/systemd/system/kamailio.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2022-08-04 12:47:54 PDT; 12h ago
+ Main PID: 23151 (kamailio)
+    Tasks: 42
+   CGroup: /system.slice/kamailio.service
+           ├─23151 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23155 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23156 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23157 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23158 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23162 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23163 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23164 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23165 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23171 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23172 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23173 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23177 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23178 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23179 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23182 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23183 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23184 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23185 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23188 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23189 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23190 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23191 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23192 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23193 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23203 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23204 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23205 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23206 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23207 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23208 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23209 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23210 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23215 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23216 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23221 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23222 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23224 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23225 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23226 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           ├─23227 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+           └─23231 /usr/local/sbin/kamailio -P /var/run/kamailio/kamailio.pid -f /usr/local/etc/kamailio/kamailio.cfg -m 64 -M 8 -u kamailio -g kamailio
+
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23231]: ERROR: rtpproxy [rtpproxy.c:1409]: send_rtpp_command(): proxy <udp:127.0.0.1:7722> does not respond, disable it
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23231]: WARNING: rtpproxy [rtpproxy.c:1266]: rtpp_test(): can't get version of the RTP proxy
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23231]: WARNING: rtpproxy [rtpproxy.c:1303]: rtpp_test(): support for RTP proxy <udp:127.0.0.1:7722> has been disa...mporarily
+Aug 04 12:47:54 localhost.localdomain systemd[1]: Started Kamailio SIP Proxy Server.
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23225]: ERROR: rtpproxy [rtpproxy.c:1374]: send_rtpp_command(): can't send command to a RTP proxy
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23225]: ERROR: rtpproxy [rtpproxy.c:1409]: send_rtpp_command(): proxy <udp:127.0.0.1:7722> does not respond, disable it
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23225]: WARNING: rtpproxy [rtpproxy.c:1266]: rtpp_test(): can't get version of the RTP proxy
+Aug 04 12:47:54 localhost.localdomain /usr/local/sbin/kamailio[23225]: WARNING: rtpproxy [rtpproxy.c:1303]: rtpp_test(): support for RTP proxy <udp:127.0.0.1:7722> has been disa...mporarily
+Aug 04 12:48:06 localhost.localdomain systemd[1]: [/etc/systemd/system/kamailio.service:8] Not an absolute path, ignoring: $PIDFILE
+Aug 04 12:58:38 localhost.localdomain systemd[1]: [/etc/systemd/system/kamailio.service:8] Not an absolute path, ignoring: $PIDFILE
+Hint: Some lines were ellipsized, use -l to show in full.
