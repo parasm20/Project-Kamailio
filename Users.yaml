@@ -2,11 +2,94 @@ kamctl db show subscriber
 +----+----------+--------------+-----------+----------------------------------+----------------------------------+
 | id | username | domain       | password  | ha1                              | ha1b                             |
 +----+----------+--------------+-----------+----------------------------------+----------------------------------+
-|  1 | 2001     | kamilio.org  | Paras2001 | 5e40245e77475e1367ddd0d736913049 | 99de80cc8417920908d3f7eb5a5f6232 |
-|  2 | 1000     | kamilio.org  | paras1000 | 996f8d8780365ef207ae0b7c3306d563 | d3886e2673382416d4f934f6a3c95956 |
-|  3 | 1001     | kamilio.org  | paras1001 | f0930484445974012a9d3372b5d6a751 | 7c3a1bc9bc9b835ddad591545e82a8b3 |
-|  4 | 3001     | kamailio.org | paras3001 | c1c5ed3ba4b949eb2658693cc6f993f7 | 1cda0ad147a8ba0972aca907f5f5a4f3 |
+|  3 | 1003     | 192.168.1.49 | paras1003 | 4aa20555e2028546b70bd465394f6b1e | 62214cc8f5f63edf0694b4a793271f72 |
+|  4 | 1004     | 192.168.1.50 | paras1004 | e54c76daf9302294da6bc7086b1f77c6 | 94491da5d8cc49a2294e96e9678408dd |
+|  5 | 1001     | 192.168.1.50 | paras1001 | 9bb76ee8489a52c4833b041459fee30e | f86728276e633e7fa4dc1b2e957e15c3 |
+|  6 | 1002     | 192.168.1.50 | paras1002 | b719d7f4b5004a4618c6dceeb8210960 | a0dd21646bf85571a0e98628c20f8a72 |
+|  7 | 1000     | 192.168.1.50 | paras1000 | b54284298b858dc7b419872afe3ae49a | 4b64d19cbc9104395698627bdfa19a13 |
 +----+----------+--------------+-----------+----------------------------------+----------------------------------+
+
+kamctl ul show
+{
+  "jsonrpc":  "2.0",
+  "result": {
+    "Domains":  [{
+        "Domain": {
+          "Domain": "location",
+          "Size": 1024,
+          "AoRs": [{
+              "Info": {
+                "AoR":  "1000",
+                "HashID": 924766747,
+                "Contacts": [{
+                    "Contact":  {
+                      "Address":  "sip:1000@192.168.1.49:57758;transport=tcp",
+                      "Expires":  2660,
+                      "Q":  -1,
+                      "Call-ID":  "0iK4zFtYaQ",
+                      "CSeq": 21,
+                      "User-Agent": "Linphone Desktop/4.4.1 (DESKTOP-H0NU7T3) Windows 10 Version 2009, Qt 5.15.2 LinphoneCore/5.1.19-1-g6cdd0918e",
+                      "Received": "sip:192.168.1.49:57758;transport=tcp",
+                      "Path": "[not set]",
+                      "State":  "CS_SYNC",
+                      "Flags":  0,
+                      "CFlags": 64,
+                      "Socket": "tcp:192.168.1.50:5060",
+                      "Methods":  4294967295,
+                      "Ruid": "uloc-62f4bbb9-15685-3",
+                      "Instance": "<urn:uuid:c2575dd8-ee51-006f-993b-ee835aea6366>",
+                      "Reg-Id": 0,
+                      "Server-Id":  0,
+                      "Tcpconn-Id": 2,
+                      "Keepalive":  1,
+                      "Last-Keepalive": 1660213406,
+                      "KA-Roundtrip": 0,
+                      "Last-Modified":  1660213406
+                    }
+                  }]
+              }
+            }, {
+              "Info": {
+                "AoR":  "1001",
+                "HashID": 924766748,
+                "Contacts": [{
+                    "Contact":  {
+                      "Address":  "sip:1001@192.168.1.49:53972;transport=TCP;rinstance=8d80acdcd7c4eece",
+                      "Expires":  333,
+                      "Q":  -1,
+                      "Call-ID":  "btO2f5IoCtTfu7YTbi5vaw..",
+                      "CSeq": 4,
+                      "User-Agent": "Z 5.5.13 v2.10.18.3",
+                      "Received": "sip:192.168.1.49:53972;transport=tcp",
+                      "Path": "[not set]",
+                      "State":  "CS_SYNC",
+                      "Flags":  0,
+                      "CFlags": 64,
+                      "Socket": "tcp:192.168.1.50:5060",
+                      "Methods":  5087,
+                      "Ruid": "uloc-62f4bbb9-15687-9",
+                      "Instance": "[not set]",
+                      "Reg-Id": 0,
+                      "Server-Id":  0,
+                      "Tcpconn-Id": 1,
+                      "Keepalive":  1,
+                      "Last-Keepalive": 1660214079,
+                      "KA-Roundtrip": 0,
+                      "Last-Modified":  1660214079
+                    }
+                  }]
+              }
+            }
+  ],
+          "Stats":  {
+            "Records":  2,
+            "Max-Slots":  1
+          }
+        }
+      }]
+  },
+  "id": 97494
+}
 
 service kamailio status
 Redirecting to /bin/systemctl status kamailio.service
